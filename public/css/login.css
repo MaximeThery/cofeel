@@ -1,3 +1,152 @@
 body {
-  background-color: red;
+  background-color: #62959c;
+}
+
+html {
+  font-weight: 200;
+  font-family: "Fredoka One";
+}
+
+input,
+button {
+  margin-bottom: 5%;
+}
+
+input {
+  border-radius: 30px;
+  padding: 2% 45% 2% 3%;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 40px;
+  padding: 5%;
+}
+
+.card a {
+  margin-left: 18%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#Forgot_Pasword {
+  -webkit-text-decoration: underline 3px red;
+          text-decoration: underline 3px red;
+  text-underline-offset: 3px;
+}
+
+.div_logo_img {
+  text-align: center;
+}
+
+.logo_img {
+  width: 80%;
+}
+
+.btn-primary {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 3%;
+  opacity: 1;
+  background-color: #ffffff;
+  border: 2px solid #E3D0B9;
+}
+
+.btn-primary span {
+  color: #E3D0B9;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+.btn-primary:hover {
+  -webkit-animation: rotate 0.7s ease-in-out both;
+          animation: rotate 0.7s ease-in-out both;
+}
+
+.btn-primary:hover span {
+  -webkit-animation: storm 0.7s ease-in-out both;
+          animation: storm 0.7s ease-in-out both;
+  -webkit-animation-delay: 0.06s;
+          animation-delay: 0.06s;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
 }
