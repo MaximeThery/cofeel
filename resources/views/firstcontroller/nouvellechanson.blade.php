@@ -16,7 +16,7 @@
             @csrf
             <input type="text" required placeholder="Title" name="title" value="" />
             <br />
-            <input type="file" required name="song" />
+            <input type="file" required name="song"  />
             <br />
             <input type="number" required min="0" max="10" name="note" placeholder="Note" />
             <br />
