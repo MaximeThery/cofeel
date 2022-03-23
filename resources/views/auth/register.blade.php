@@ -1,11 +1,21 @@
-@extends('layout')
-
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+</head>
+<body>
 <div class="container">
+<div class="div_logo_img"> <img src="{{ asset('cup.png') }}"class="logo_img"/></div>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+            <a href="/login">Conexion</a>
+            <a href="/register" id="inscription">Inscription</a>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -63,8 +73,8 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                <button type="submit" class="btn-primary">
+                                <span> {{ __('Register') }}  </span>
                                 </button>
                             </div>
                         </div>
@@ -74,4 +84,5 @@
         </div>
     </div>
 </div>
-@endsection
+</body>
+</html>
