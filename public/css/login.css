@@ -33,9 +33,10 @@ a {
 }
 
 #Forgot_Pasword {
-  -webkit-text-decoration: underline 3px red;
-          text-decoration: underline 3px red;
+  -webkit-text-decoration: underline 3px #62959c;
+          text-decoration: underline 3px #62959c;
   text-underline-offset: 3px;
+  margin-left: 23%;
 }
 
 #conexion {
