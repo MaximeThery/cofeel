@@ -6,8 +6,6 @@
 
 </head>
 <body>
-    <header>Mon application</header>
-
     <nav>
         <a href="/">Home</a>
         <a href="/about">About me</a>
