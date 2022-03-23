@@ -38,6 +38,18 @@ a {
   text-underline-offset: 3px;
 }
 
+#conexion {
+  -webkit-text-decoration: underline 3px #62959c;
+          text-decoration: underline 3px #62959c;
+  text-underline-offset: 3px;
+}
+
+#inscription {
+  -webkit-text-decoration: underline 3px #62959c;
+          text-decoration: underline 3px #62959c;
+  text-underline-offset: 3px;
+}
+
 .div_logo_img {
   text-align: center;
 }
