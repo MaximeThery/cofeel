@@ -1,0 +1,20 @@
+.img__log {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Fredoka One";
+}
+
+.img__log p {
+  margin-bottom: 5%;
+}
+
+li {
+  margin-bottom: 2%;
+  margin-top: 5%;
+}
+
+h1 {
+  margin-bottom: 5%;
+  color: #62959c;
+}

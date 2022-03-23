@@ -1,11 +1,6 @@
 @extends('layout')
 
 @section('content')
-    <h1>Mon application</h1>
-    <p>Hello World</p>
-
-
-
     @include('firstcontroller._songs', ["songs" => $songs])
     <audio id="lecteur">
 

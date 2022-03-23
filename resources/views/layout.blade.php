@@ -3,7 +3,7 @@
     <title>Website</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
 </head>
 <body>
     <nav>
@@ -20,7 +20,7 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
-            <a href="/nouvelle/chanson">New song</a>
+            <a href="/nouvelle/chanson" class="New__song">Add a new song</a>
         @else
         <a href="/login">login</a>
         <a href="/register">register</a>
