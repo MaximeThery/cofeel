@@ -1,7 +1,7 @@
 @extends("layout")
 
 @section("content")
-
+<link href="{{ asset('css/newsongs.css') }}" rel="stylesheet">
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -18,7 +18,7 @@
             <br />
             <input type="file" required name="song" />
             <br />
-            <input type="number" required min="0" max="10" name="note" />
+            <input type="number" required min="0" max="10" name="note" placeholder="Note" />
             <br />
             <input type="submit" />
         </form> 
