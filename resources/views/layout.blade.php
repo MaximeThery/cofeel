@@ -3,9 +3,7 @@
     <title>Website</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="/js/jquery.js"></script>
-    <script src="/js/divers.js"></script>
-    <script src="/js/jquery.pjax.js"></script>
+
 </head>
 <body>
     <header>Mon application</header>
@@ -41,5 +39,7 @@
     <footer>Copyright M.T</footer>
 </body>
 
-
+<script src="/js/jquery.js"></script>
+<script src="/js/divers.js"></script>
+<script src="/js/jquery.pjax.js"></script>
 </html>

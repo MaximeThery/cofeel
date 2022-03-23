@@ -457,12 +457,24 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 1536px;
   }
 }
-body {
-  background-color: blue;
+.hp_slide {
+  width: 100%;
+  background: white;
+  height: 20rem;
+}
+
+.hp_range {
+  width: 0;
+  background: black;
+  height: 20rem;
 }
 
 .m-0 {
   margin: 0px;
+}
+
+.m-auto {
+  margin: auto;
 }
 
 .mb-3 {
