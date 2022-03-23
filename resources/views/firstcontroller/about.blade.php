@@ -1,5 +1,9 @@
 @extends('layout')
 
 @section('content')
-    <h1>ABOUT</h1>
+<img src="{{ asset('about.png') }}" alt="">
+@auth
+        {{Auth::user()->name}}
+        @else
+        @endauth
 @endsection
