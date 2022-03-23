@@ -21,3 +21,8 @@ mix.sass('resources/sass/app.scss', 'public/css')
         processCssUrls: false,
         postCss: [ tailwindcss('./tailwind.config.js') ],
     })
+    .sass('resources/sass/newsongs.scss', 'public/css')
+    .options({
+        processCssUrls: false,
+        postCss: [ tailwindcss('./tailwind.config.js') ],
+    })

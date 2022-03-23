@@ -1,0 +1,17 @@
+html {
+  font-size: 40pt;
+}
+
+form {
+  background-color: antiquewhite;
+  text-align: flex-start;
+}
+
+input {
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+input[type=submit] {
+  background-color: red;
+}
