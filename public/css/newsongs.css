@@ -1,17 +1,27 @@
 html {
-  font-size: 40pt;
+  font-size: 3rem;
 }
 
 form {
   background-color: antiquewhite;
-  text-align: flex-start;
+  text-align: center;
+  border-radius: 20px;
+  margin: 10% 3%;
+  min-height: 500px;
 }
 
 input {
   margin-bottom: 2%;
   margin-top: 2%;
+  border-radius: 20px;
 }
 
 input[type=submit] {
-  background-color: red;
+  background-color: #62959c;
+  padding: 1%;
+  color: aliceblue;
+}
+
+input[type=file] {
+  max-width: 40.9%;
 }
