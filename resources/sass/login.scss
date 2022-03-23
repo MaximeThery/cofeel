@@ -22,10 +22,15 @@ align-items: center;
     background-color: #ffffff;
     border-radius: 40px;
     padding: 5%;
-    height: 100%;
+    height: auto;
+    min-height: 300px;
+    margin-bottom: 15%;
 }
 .card a{
     margin-left: 18%;
+}
+.card-body{
+    margin-top: 5%;
 }
 a {
     text-decoration: none;
@@ -46,8 +51,8 @@ a {
 }
 .div_logo_img{
     text-align: center;
-    margin-bottom: 10%;
-    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 .logo_img{
     width: 80%;
