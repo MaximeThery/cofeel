@@ -10,11 +10,17 @@
     <audio id="lecteur">
 
     </audio>
-    <div>
-        <button onclick="document.getElementById('lecteur').play()">Play</button>
-        <button onclick="document.getElementById('lecteur').pause()">Pause</button>
-        <button onclick="document.getElementById('lecteur').volume += 0.1">Vol +</button>
-        <button onclick="document.getElementById('lecteur').volume -= 0.1">Vol -</button>
-        <canvas id='progress-bar' style="cursor: pointer; background-color: gray; width : 20rem; height : 2rem">canvas not supported</canvas>
+    <div class="lecteur_perso absolute bottom-0 left-0 right-0 h-1/4">
+
+        <div class="time">
+            <span class="start"></span>
+            <button id="button_play" class="play"></button>
+            <span class="end"></span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar">
+                <div class="now"></div>
+            </div>
+        </div>
     </div>
 @endsection
