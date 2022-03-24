@@ -7,27 +7,28 @@
 </head>
 <body>
     <nav>
-        <a href="/">Home</a>
-        <a href="/about">About me</a>
         @auth
-            Bonjour {{Auth::user()->name}}
-            <a class="dropdown-item" href="{{ route('logout') }}"
+           <center >Bon retour parmis nous {{Auth::user()->name}} !<br>
+           <div class="nav__choices">
+            <div><img src="{{ asset('house.png') }}"  class="img__nav" alt="Home icon"><a href="/">Home</a></div>
+            <div> <img src="{{ asset('profil.png') }}" class="img__nav" alt="Profil icon"><a href="/about">Profil</a></div>
+            <div><img src="{{ asset('logout.png') }}" class="img__nav" alt="Logout icon"><a class="dropdown-item" href="{{ route('logout') }}"
                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}
-            </a>
-
+            </a></div>
+           
+            </center>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
-            <a href="/nouvelle/chanson" class="New__song">Add a new song</a>
         @else
         <a href="/login">login</a>
         <a href="/register">register</a>
 
         @endauth
 
-
+        </div>
     </nav>
 
     <main id="pjax-container">
