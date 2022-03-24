@@ -19,3 +19,14 @@ h1 {
   margin-bottom: 5%;
   color: #62959c;
 }
+
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img__logout {
+  width: 12%;
+  padding-right: 1%;
+}
