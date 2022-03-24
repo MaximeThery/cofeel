@@ -1,3 +1,5 @@
+const button = document.getElementById('button_play');
+let compteur = 1;
 
 $(document).ready(function (){
     $('a.song').click(function (e) {
@@ -6,43 +8,60 @@ $(document).ready(function (){
         e.preventDefault()
         audio[0].src = url
         audio[0].play()
+        button.classList.remove("pause");
+        button.classList.add("play");
+        compteur = 1;
     })
     }
 )
 
-var progressBar;
-var canvas;
-mediaPlayer = document.getElementById("lecteur");
-progressBar = document.getElementById('progress-bar');
-canvas = document.getElementById('progress-bar');
-canvas.addEventListener("click", function(e) {
-    var canvas = document.getElementById('progress-bar');
-    if (!e) {
-        e = window.event;
-    } //get the latest windows event if it isn't set
-    try {
-        //calculate the current time based on position of mouse cursor in canvas box
-        mediaPlayer.currentTime = mediaPlayer.duration * (e.offsetX / canvas.clientWidth);
+
+
+button.addEventListener('click', event => {
+    if (compteur == 1){
+        document.getElementById('lecteur').pause();
+        compteur = 2;
+        button.classList.remove("play");
+        button.classList.add("pause");
     }
-    catch (err) {
-        // Fail silently but show in F12 developer tools console
-        if (window.console && console.error("Error:" + err));
+    else{
+        document.getElementById('lecteur').play();
+        compteur = 1;
+        button.classList.remove("pause");
+        button.classList.add("play");
     }
-}, true);
-mediaPlayer.addEventListener('timeupdate', updateProgressBar, false);
-function updateProgressBar() {
-    mediaPlayer = document.getElementById('lecteur');
-    //get current time in seconds
-    var elapsedTime = Math.round(mediaPlayer.currentTime);
-    //update the progress bar
-    if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
-        //clear canvas before painting
-        ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
-        ctx.fillStyle = "rgb(255,0,0)";
-        var fWidth = (elapsedTime / mediaPlayer.duration) * (canvas.clientWidth);
-        if (fWidth > 0) {
-            ctx.fillRect(0, 0, fWidth, canvas.clientHeight);
-        }
-    }
+});
+
+const audio = document.getElementById('lecteur')
+const start = document.querySelector('.start')
+const end = document.querySelector('.end')
+const progressBar = document.querySelector('.progress-bar')
+const now = document.querySelector('.now')
+
+function conversion (value) {
+    let minute = Math.floor(value / 60)
+    minute = minute.toString().length === 1 ? ('0' + minute) : minute
+    let second = Math.round(value % 60)
+    second = second.toString().length === 1 ? ('0' + second) : second
+    return `${minute}:${second}`
 }
+
+audio.onloadedmetadata = function () {
+    end.innerHTML = conversion(audio.duration)
+    start.innerHTML = conversion(audio.currentTime)
+}
+
+progressBar.addEventListener('click', function (event) {
+    let coordStart = this.getBoundingClientRect().left
+    let coordEnd = event.pageX
+    let p = (coordEnd - coordStart) / this.offsetWidth
+    now.style.width = p.toFixed(3) * 100 + '%'
+
+    audio.currentTime = p * audio.duration
+    audio.play()
+})
+
+setInterval(() => {
+    start.innerHTML = conversion(audio.currentTime)
+    now.style.width = audio.currentTime / audio.duration.toFixed(3) * 100+ '%'
+}, 0.5)
