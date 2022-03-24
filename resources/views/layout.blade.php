@@ -23,9 +23,12 @@
                 @csrf
             </form>
         @else
+        <center>
+        <div class="nav__choices">
         <a href="/login">login</a>
         <a href="/register">register</a>
-
+        </div>
+        </center>
         @endauth
 
         </div>
