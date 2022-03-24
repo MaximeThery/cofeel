@@ -16,7 +16,6 @@
     align-items: center;
     width: 90%;
     height: 4rem;
-    margin: 0 auto;
 }
 
 .progress-bar {
@@ -50,7 +49,6 @@
     background-color: lightblue;
 }
 .time{
-    margin: auto;
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -58,17 +56,19 @@
     align-items: flex-end
 }
 .lecteur_perso{
+    justify-content: flex-end;
     background-color: #E3D0B9;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    padding: 3rem 0;
     &:before
     {
         position: absolute;
-        width: 125%;
-        height: 70%;
+        width: 150%;
+        height: 100%;
         border-radius: 50%;
         top: -20%;
         background-color:#FFF;
@@ -80,11 +80,11 @@
 }
 
 #button_play{
-    width: 15rem;
+    width: 20rem;
     background-repeat: no-repeat;
-    height: 15rem;
+    height: 20rem;
     background-position: center;
-    background-color:#62959C ;
+    background-color:#62959C;
     border-radius: 50%;
     transform: rotate(180deg);
 }
@@ -95,4 +95,8 @@
 
 .pause{
     background-image: url("../img/pause.png");
+}
+
+#infos{
+    z-index: 2;
 }

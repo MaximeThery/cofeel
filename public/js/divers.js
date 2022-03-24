@@ -1,13 +1,20 @@
 const button = document.getElementById('button_play');
-let compteur = 1;
+let compteur = 2;
 
 $(document).ready(function (){
+    let url = $('a.song').first().attr("data-file")
+    let audio = $("#lecteur")
+    audio[0].src = url
     $('a.song').click(function (e) {
         let url = $(this).attr("data-file")
+        let titre = $(this).attr("data-titre")
+        let artiste = $(this).attr("data-artiste")
+        let infos = $("#infos")
         let audio = $("#lecteur")
         e.preventDefault()
         audio[0].src = url
         audio[0].play()
+        infos.html("<h3>" + titre + "</h3> <h4>" + artiste + "</h4>")
         button.classList.remove("pause");
         button.classList.add("play");
         compteur = 1;
@@ -40,7 +47,7 @@ const now = document.querySelector('.now')
 
 function conversion (value) {
     let minute = Math.floor(value / 60)
-    minute = minute.toString().length === 1 ? ('0' + minute) : minute
+    minute = minute.toString().length === 1 ? (minute) : minute
     let second = Math.round(value % 60)
     second = second.toString().length === 1 ? ('0' + second) : second
     return `${minute}:${second}`
