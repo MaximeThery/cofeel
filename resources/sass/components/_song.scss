@@ -54,12 +54,29 @@
     width: 90%;
     display: flex;
     justify-content: space-between;
+    z-index: 2;
+    align-items: flex-end
 }
 .lecteur_perso{
     background-color: #E3D0B9;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    &:before
+    {
+        position: absolute;
+        width: 125%;
+        height: 70%;
+        border-radius: 50%;
+        top: -20%;
+        background-color:#FFF;
+        display:inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        content: '';
+    }
 }
 
 #button_play{

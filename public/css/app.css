@@ -514,6 +514,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 90%;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
+  align-items: flex-end;
 }
 
 .lecteur_perso {
@@ -521,6 +523,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.lecteur_perso:before {
+  position: absolute;
+  width: 125%;
+  height: 70%;
+  border-radius: 50%;
+  top: -20%;
+  background-color: #FFF;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  content: "";
 }
 
 #button_play {
