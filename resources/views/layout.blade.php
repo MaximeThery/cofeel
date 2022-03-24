@@ -10,13 +10,10 @@
         @auth
            <center >Bon retour parmis nous {{Auth::user()->name}} !<br>
            <div class="nav__choices">
-            <div><img src="{{ asset('house.png') }}"  class="img__nav" alt="Home icon"><a href="/">Home</a></div>
-            <div> <img src="{{ asset('profil.png') }}" class="img__nav" alt="Profil icon"><a href="/about">Profil</a></div>
-            <div><img src="{{ asset('logout.png') }}" class="img__nav" alt="Logout icon"><a class="dropdown-item" href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a></div>
+            <div><a href="/"><img src="{{ asset('house.png') }}"  class="img__nav" alt="Home icon"></a></div>
+            <div> <a href=""><img src="{{ asset('loupe.png') }}" class="img__nav2" alt="search bar icon"></a></div>
+            <div> <a href=""><img src="{{ asset('cloche.png') }}" class="img__nav2" alt="Profil icon"></a></div>
+            <div> <a href="/about"><img src="{{ asset('aboutnav.png') }}" class="img__nav" alt="Profil icon"></a></div>
            
             </center>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
