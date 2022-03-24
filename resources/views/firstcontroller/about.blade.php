@@ -13,5 +13,9 @@
 
 
 <a href="/nouvelle/chanson" class="New__song">Add a new song</a>
+<h1>Vos favoris du moment : </h1>
+
+<h1>Utilisateurs suivis : </h1>
+
 </div>
 @endsection
