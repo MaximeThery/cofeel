@@ -17,5 +17,12 @@
 
 <h1>Utilisateurs suivis : </h1>
 
+<div class="logout">
+<img src="{{ asset('logout.png') }}" class="img__logout" alt="Logout icon"><a class="dropdown-item" href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+</div>
 </div>
 @endsection
