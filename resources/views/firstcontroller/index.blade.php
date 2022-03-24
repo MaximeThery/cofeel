@@ -5,11 +5,12 @@
     <audio id="lecteur">
 
     </audio>
-    <div class="lecteur_perso absolute bottom-0 left-0 right-0 h-1/4">
-
+    <div class="lecteur_perso absolute bottom-0 left-0 right-0 h-1/3">
+        <div id="infos">
+        </div>
         <div class="time">
             <span class="start"></span>
-            <button id="button_play" class="play"></button>
+            <button id="button_play" class="pause"></button>
             <span class="end"></span>
         </div>
         <div class="progress">
