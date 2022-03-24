@@ -610,3 +610,20 @@ body {
 .song {
   color: #ee7186;
 }
+
+.nav__choices {
+  background-color: #E3D0B9;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 8%;
+}
+
+.nav__choices div {
+  display: flex;
+  align-items: center;
+}
+
+.img__nav {
+  width: 30%;
+  padding-right: 5%;
+}
