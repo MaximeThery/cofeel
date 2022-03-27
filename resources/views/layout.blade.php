@@ -1,3 +1,6 @@
+@if(request()->ajax())
+    @yield('content')
+@else
 <html>
 <head>
     <title>Website</title>
@@ -30,26 +33,8 @@
             </div>
     </nav>
         </center>
-
-    <main id="pjax-container">
-
-        <audio id="lecteur">
-
-        </audio>
-        <div class="lecteur_perso absolute bottom-0 left-0 right-0 h-1/3">
-            <div id="infos">
-            </div>
-            <div class="time">
-                <span class="start"></span>
-                <button id="button_play" class="pause"></button>
-                <span class="end"></span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar">
-                    <div class="now"></div>
-                </div>
-            </div>
-        </div>
+    @include('firstcontroller.song_container')
+    <main class="fixe" id="pjax-container">
         @yield('content')
     </main>
 </body>
@@ -58,3 +43,4 @@
 <script src="/js/divers.js"></script>
 <script src="/js/jquery.pjax.js"></script>
 </html>
+@endif

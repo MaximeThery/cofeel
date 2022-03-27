@@ -8,12 +8,12 @@
 @auth
     @if(Auth::id() != $user->id)
         @if(Auth::user()-> IfollowThem->contains($user->id))
-            <a href="/suivre/{{$user->id}}" class="New__song">Suivi</a>
+            <a href="/suivre/{{$user->id}}" data-follow class="New__song">Suivi</a>
         @else
-            <a href="/suivre/{{$user->id}}" class="New__song">Suivre</a>
+            <a href="/suivre/{{$user->id}}" data-follow class="New__song">Suivre</a>
         @endif
     @endif
 @endauth
-
  @include("firstcontroller._songs", ["songs" => $user->songs])
+
 @endsection
