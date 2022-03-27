@@ -5,7 +5,7 @@ $(document).ready(function (){
     let url = $('a.song').first().attr("data-file")
     let audio = $("#lecteur")
     audio[0].src = url
-    $('a.song').click(function (e) {
+    $('.fixe').on('click','a.song', function (e) {
         let url = $(this).attr("data-file")
         let titre = $(this).attr("data-titre")
         let artiste = $(this).attr("data-artiste")
@@ -20,8 +20,9 @@ $(document).ready(function (){
         compteur = 1;
     })
 
-    $(document).pjax('a', '#pjax-container', true)
-
+    $(document).pjax('a:not([data-follow])', '#pjax-container')
+    $(document).pjax('a[data-follow]', '#pjax-container',{push:false
+    })
     })
 
 
