@@ -16,8 +16,4 @@
 @endauth
 
  @include("firstcontroller._songs", ["songs" => $user->songs])
-
-    
-    <audio id="lecteur" controls></audio>
-    </div>
 @endsection
