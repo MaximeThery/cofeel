@@ -14,7 +14,7 @@
             <div> <a href=""><img src="{{ asset('loupe.png') }}" class="img__nav2" alt="search bar icon"></a></div>
             <div> <a href=""><img src="{{ asset('cloche.png') }}" class="img__nav2" alt="Profil icon"></a></div>
             <div> <a href="/about"><img src="{{ asset('aboutnav.png') }}" class="img__nav" alt="Profil icon"></a></div>
-           
+
             </center>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
@@ -25,17 +25,32 @@
         <a href="/login">login</a>
         <a href="/register">register</a>
         </div>
-        </center>
-        @endauth
-
-        </div>
+            @endauth
+            </div>
     </nav>
+        </center>
 
     <main id="pjax-container">
+
+        <audio id="lecteur">
+
+        </audio>
+        <div class="lecteur_perso absolute bottom-0 left-0 right-0 h-1/3">
+            <div id="infos">
+            </div>
+            <div class="time">
+                <span class="start"></span>
+                <button id="button_play" class="pause"></button>
+                <span class="end"></span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar">
+                    <div class="now"></div>
+                </div>
+            </div>
+        </div>
         @yield('content')
     </main>
-
-    <footer>Copyright M.T</footer>
 </body>
 
 <script src="/js/jquery.js"></script>

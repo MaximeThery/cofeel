@@ -19,8 +19,10 @@ $(document).ready(function (){
         button.classList.add("play");
         compteur = 1;
     })
-    }
-)
+
+    $(document).pjax('a', '#pjax-container', true)
+
+    })
 
 
 
