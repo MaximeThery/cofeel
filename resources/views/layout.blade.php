@@ -8,13 +8,13 @@
 <body>
     <nav>
         @auth
-           <center >Bon retour parmis nous {{Auth::user()->name}} !<br>
+           <div class="center"><p>Bon retour parmis nous {{Auth::user()->name}} !<p>
            <div class="nav__choices">
             <div><a href="/"><img src="{{ asset('house.png') }}"  class="img__nav" alt="Home icon"></a></div>
             <div> <a href="/article/{id}"><img src="{{ asset('cloche.png') }}" class="img__nav2" alt="Profil icon"></a></div>
             <div> <a href="/about"><img src="{{ asset('aboutnav.png') }}" class="img__nav" alt="Profil icon"></a></div>
            
-            </center>
+            </div>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>

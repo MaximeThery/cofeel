@@ -633,7 +633,14 @@ body {
 
 .nav__choices {
   background-color: #E3D0B9;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 1.5%;
+}
+.nav__choices img{
+width: 50%;
+margin-left: 25%;
 }
 .nav__choices2 {
   background-color: #E3D0B9;
@@ -642,14 +649,11 @@ body {
 .nav__choices2 div a {
   margin: 10%;
 }
-.nav__choices div {
-  display: flex;
-  align-items: center;
+
+.center P{
+ text-align: center;
 }
 
-.img__nav {
-  width: 100%;
-}
 
 .img__nav2 {
   width: 30%;
