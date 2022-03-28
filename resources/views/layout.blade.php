@@ -33,8 +33,12 @@
     </nav>
     @include('firstcontroller.song_container')
     <main class="fixe" id="pjax-container">
+        @auth
         <p>Bonjour {{Auth::user()->name}}<p>
-        @yield('content')
+            @yield('content')
+        @else
+            @yield('content')
+            @endif
     </main>
 </body>
 
