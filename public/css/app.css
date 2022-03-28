@@ -651,7 +651,12 @@ main {
   width: 80%;
   margin-left: 20%;
 }
-
+.fixe p{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 5%;
+  margin-top: 1%;
+}
 .img__nav {
   width: 80%;
 }
