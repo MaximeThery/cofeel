@@ -44,16 +44,16 @@ class FirstController extends Controller
     }
 
     public function storechanson(Request $request){
-
+        $request -> validate([
+            'title' =>'required|max:50|min:3',
+            'note' => 'required|integer|min:0',
+            'song' => 'required|mimes:ogg,mp3'
+        ]
+    );
 
         $name = $request -> file("song")-> hashName();
         $request->file('song')->move("songs/".Auth::id(), $name);
-        $request -> validate([
-                'title' =>'required|max:50|min:3',
-                'note' => 'required|integer|min:0',
-                'song' => 'required|mines:ogg,mp3'
-            ]
-        );
+
         $s = new Song();
         $s->url = "/songs/".Auth::id()."/$name";
 
