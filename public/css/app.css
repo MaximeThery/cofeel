@@ -642,7 +642,12 @@ main {
   grid-template-columns: repeat(3, 1fr);
   padding: 0.5%;
 }
-
+.nav__choices2{
+background-color: #E3D0B9;
+}
+.nav__choices2 a{
+ margin-left: 20%;
+  }
 .nav__choices div {
   display: flex;
   align-items: center;
