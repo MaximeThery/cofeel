@@ -16,7 +16,8 @@
 <h1>Vos favoris du moment : </h1>
 
 <h1>Utilisateurs suivis : </h1>
-
+<h1>Vos musiques :</h1>
+    @include("firstcontroller._songs", ["songs" => $user->songs])
 <div class="logout">
 <img src="{{ asset('logout.png') }}" class="img__logout" alt="Logout icon"><a class="dropdown-item" href="{{ route('logout') }}"
                onclick="event.preventDefault();
@@ -25,4 +26,5 @@
             </a>
 </div>
 </div>
+
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Song;
 use App\Models\User;
+use App\Models\Connection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,8 +29,11 @@ class FirstController extends Controller
         return view("firstcontroller.index" , ['songs' => $songs]);
     }
     Public function about(){
-        return view("firstcontroller.about");
+        $user = User::findOrFail(Auth::user()->id);
+        $follow = Auth::user()->IfollowThem()->toggle(Auth::user()->id);
+        return view("firstcontroller.about", ["user"=>$user], ["follow" => $follow]);
     }
+
     public function article($id){
         $s = Song::find(1); // select * from songs where id=1;
 

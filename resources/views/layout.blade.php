@@ -17,7 +17,6 @@
             <div> <a href="/article/{id}"><img src="{{ asset('cloche.png') }}" class="img__nav2" alt="Profil icon"></a></div>
             <div> <a href="/about"><img src="{{ asset('aboutnav.png') }}" class="img__nav" alt="Profil icon"></a></div>
             </div>
-            <p>Bon retour parmis nous {{Auth::user()->name}} !<p>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
@@ -32,9 +31,9 @@
             @endauth
             </div>
     </nav>
-        </center>
     @include('firstcontroller.song_container')
     <main class="fixe" id="pjax-container">
+        <p>Bonjour {{Auth::user()->name}}<p>
         @yield('content')
     </main>
 </body>
