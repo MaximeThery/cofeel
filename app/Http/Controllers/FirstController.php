@@ -30,7 +30,7 @@ class FirstController extends Controller
     }
     Public function about(){
         $user = User::findOrFail(Auth::user()->id);
-        $follow = Auth::user()->IfollowThem()->toggle(Auth::user()->id);
+        $follow = Auth::user()->IfollowThem()->where(Auth::user()->from_id)->count();
         return view("firstcontroller.about", ["user"=>$user], ["follow" => $follow]);
     }
 

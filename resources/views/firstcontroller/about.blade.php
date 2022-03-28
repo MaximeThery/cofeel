@@ -16,6 +16,7 @@
 <h1>Vos favoris du moment : </h1>
 
 <h1>Utilisateurs suivis : </h1>
+        {{$follow}}
 <h1>Vos musiques :</h1>
     @include("firstcontroller._songs", ["songs" => $user->songs])
 <div class="logout">
